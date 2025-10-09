@@ -1,12 +1,12 @@
 # Portfolio Part 1: Component Brainstorming
 
-- **Name**: Jeng(Zizheng) Zhuang
-- **Dot Number**: zhuang.339
-- **Due Date**: 9/19 @ 4:10 PM EST
+- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) then delete this comment -->
+- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) then delete this comment -->
+- **Due Date**: <!-- TODO: fill with due date and time (e.g., 10/17 @ 3:10 PM EST) then delete this comment -->
 
 ## Assignment Overview
 
-
+<!-- TODO: read the assignment overview then delete this comment -->
 
 The overall goal of the portfolio project is to have you design and implement
 your own OSU component. There are no limits to what you choose to design and
@@ -29,7 +29,7 @@ implement.
 
 ## Assignment Checklist
 
-
+<!-- TODO: browse the checklist then delete this comment -->
 
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
@@ -52,7 +52,7 @@ to the tree diagram (you may remove this one as well):
 
 ## Assignment Learning Objectives
 
-
+<!-- TODO: read the assignment learning objectives then delete this comment -->
 
 Without learning objectives, there really is no clear reason why a particular
 assessment or activity exists. Therefore, to be completely transparent, here is
@@ -67,7 +67,7 @@ project. Specifically, students should be able to:
 
 ## Assignment Rubric: 10 Points
 
-
+<!-- TODO: read the assignment rubric then delete this comment -->
 
 Again, to be completely transparent, most of the portfolio project, except the
 final submission, is designed as a formative assessment. Formative assessments
@@ -106,11 +106,15 @@ Below is further rationale/explanation for the rubric items above:
 > brainstorming. Plus it helps us get to know you better! Feel free to share
 > images in this section.
 
-I like to play the King of Honors and Game for Peace which is a fps game, and play soccer and ping pang. I also really like a lot of Japanese anime, such as Detective Conan, Doraemon, and Pokémon. My career goal is to be a software engineer or do the IT-related job. I have been practicing Chinese calligraphy since I was a child, and I can also create traditional Chinese paintings and sketches.
+<!-- TODO: briefly talk about your interests then delete this comment.
+Also, protip: you can preview what your response looks like by hitting
+the magnifying glass icon in the upper-right corner or pressing CTRL+K and
+then V. This kind of button combination is called a chord, for whatever
+reason -->
 
 ## Assignment
 
-
+<!-- TODO: read the assignment section then delete this comment -->
 
 As previously stated, you are tasked with brainstorming 3 possible components.
 To aid you in this process, we have provided [some example components][example-components]
@@ -118,6 +122,7 @@ that may help you in your brainstorming. All of these components were made at
 some point by one of your peers, so you should feel confident that you can
 accomplish any of them.
 
+<!-- TODO: browse the list of possible projects then delete this comment -->
 
 There is no requirement that you use any of the components listed above.
 If you want to model something else, go for it! Very common early object
@@ -127,7 +132,7 @@ you're just brainstorming right now. You do not have to commit to anything.
 
 ### Example Component
 
-
+<!-- TODO: review this example component then delete this comment -->
 
 To help you brainstorm a few components, we've provided an example below of a
 component you already know well: NaturalNumber. We highly recommend that you
@@ -195,83 +200,68 @@ will likely refine your design to make your implementation easier to use.
 
 > Please use this section to share your designs.
 
-- Component Design #1: `CaseAnalyze`
+- Component Design #1: <!-- TODO: give component a name then delete this comment -->
   - **Description**:
-    - A component to manage suspects and clues in a case, inspired by Detective Conan. It stores suspects and clues (state) and provides methods to analyze and rank suspects based on clues (behavior).
+    - <!-- TODO: describe your component then delete this comment -->
   - **Kernel Methods**:
-    - `addSuspect`(Suspect s) – add a suspect to the case
-    `addClue`(Clue c) – add a clue to the case
-    `removeSuspect`(Suspect s) – remove a suspect
-    `getSuspects()` – return the list of suspects
-    `getClues()` – return the list of clues
+    - <!-- TODO: list kernel methods then delete this comment -->
   - **Secondary Methods**:
-    - `analyzeClues()` – increase each suspect's suspicion level based on the clues
-    `rankSuspects()`– sort suspects by suspicion level
-    `generateReport()` – produce a text report of all suspects
-    `clearCase()` – remove all suspects and clues
+    - <!-- TODO: list secondary methods then delete this comment -->
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - Yes, because the internal lists of suspects and clues can change (add/remove items, update suspicion levels).
+      - <!-- TODO: provide an argument then delete this comment -->
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - No, it uses `separate` classes (Suspect and Clue) but does not need inner classes or special map pairs.
+      - <!-- TODO: provide an argument then delete this comment -->
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - No, the component does not need enums; all behaviors are generic and based on integer weights or suspicion levels.
+      - <!-- TODO: provide an argument then delete this comment -->
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - Yes. For example, `analyzeClues()` uses `getClues()` and `getSuspects()` to update suspicion levels.
+      - <!-- TODO: provide an argument then delete this comment -->
 
-- Component Design #2: `Game Stats Tracker`
+- Component Design #2: <!-- TODO: give component a name then delete this comment -->
   - **Description**:
-    - A component to track your game performance in King of Honors and Game for Peace. It stores statistics such as matches played, kills, deaths, assists, and achievements (state), and provides methods to calculate win rate, kill/death ratio, and generate performance summaries (behavior).
+    - <!-- TODO: describe your component then delete this comment -->
   - **Kernel Methods**:
-    - `addMatchStats`(matchStats) – Add a new match record.
-    `updateAchievement`(achievement) – Update a specific achievement.
-    `getStats()` – Retrieve all game statistics.
+    - <!-- TODO: list kernel methods then delete this comment -->
   - **Secondary Methods**:
-    - `calculateWinRate()` – Compute win rate from match records.
-    `calculateKDR()` – Compute kill/death ratio.
-    `summarizePerformance()` – Generate a summary string of all stats.
+    - <!-- TODO: list secondary methods then delete this comment -->
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - Yes, because stats change after each game.
+      - <!-- TODO: provide an argument then delete this comment -->
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - Possibly `MatchStats` as a small class to store match info.
+      - <!-- TODO: provide an argument then delete this comment -->
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - I don't know.
+      - <!-- TODO: provide an argument then delete this comment -->
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - Yes, e.g., `calculateWinRate()` can use getStats() from kernel.
+      - <!-- TODO: provide an argument then delete this comment -->
 
-- Component Design #3: `Anime & Media Collection`
+- Component Design #3: <!-- TODO: give component a name then delete this comment -->
   - **Description**:
-    - Models your collection of anime, manga, and movies. Tracks watch/read status, ratings, and recommendations.
+    - <!-- TODO: describe your component then delete this comment -->
   - **Kernel Methods**:
-    - `addMedia`(title, type) – Add a new media item.
-    `updateStatus`(mediaID, status) – Mark as watching, completed, or planned.
-    `rateMedia`(mediaID, rating) – Assign a personal rating.
+    - <!-- TODO: list kernel methods then delete this comment -->
   - **Secondary Methods**:
-    - `listByStatus`(status) – List media items by current status.
-    `getAverageRating`(type) – Calculate average rating for a type (anime, manga, movie).
-    `recommendNext()` – Suggest a media item based on ratings and status.
+    - <!-- TODO: list secondary methods then delete this comment -->
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - Yes, you can add and update media items.
+      - <!-- TODO: provide an argument then delete this comment -->
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - I don't know.
+      - <!-- TODO: provide an argument then delete this comment -->
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - I don't know.
+      - <!-- TODO: provide an argument then delete this comment -->
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - Yes, `getAverageRating()` uses `rateMedia()` data.
+      - <!-- TODO: provide an argument then delete this comment -->
 
 ## Post-Assignment
 
@@ -280,7 +270,7 @@ completed the assignment.
 
 ### Changelog
 
-
+<!-- TODO: create CHANGELOG then delete this comment -->
 
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
@@ -319,7 +309,7 @@ of development.
 
 ### Submission
 
-
+<!-- TODO: read the submission instructions then delete this comment -->
 
 If you have completed the assignment using this template, we recommend that
 you convert it to a PDF before submission. If you're not sure how, check out
@@ -329,11 +319,11 @@ all your work is there before submitting. For future assignments, you will
 just be submitting a link to a pull request. This will be the only time
 you have to submit any PDFs.
 
-
+<!-- TODO: upload a PDF of this document and the CHANGELOG to Carmen then delete this comment -->
 
 ### Peer Review
 
-
+<!-- TODO: review the peer review guidelines then delete this comment -->
 
 Following the completion of this assignment, you will be assigned three
 students' component brainstorming assignments for review. Your job during the
@@ -360,7 +350,7 @@ If you'd like to give feedback for this assignment (or any assignment, really),
 make use of [this survey][survey]. Your feedback helps make assignments
 better for future students.
 
-
+<!-- TODO: follow the link to share your feedback then delete this comment -->
 
 [example-components]: https://therenegadecoder.com/code/the-never-ending-list-of-small-programming-project-ideas/
 [markdown-to-pdf-guide]: https://therenegadecoder.com/blog/how-to-convert-markdown-to-a-pdf-3-quick-solutions/
