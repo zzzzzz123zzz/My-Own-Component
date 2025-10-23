@@ -8,6 +8,24 @@ the following form: YYYY.0M.0D.
 
 ## [Unreleased]
 
+## [2025.10.22]
+
+### Added
+- Designed kernel and enhanced interfaces for CaseAnalyze component
+  - Added CaseAnalyzeKernel.java and CaseAnalyze.java in src/components/caseanalyze/
+  - Included full JavaDoc and OSU-style design-by-contract annotations
+
+### Updated
+- Added hierarchy diagram for CaseAnalyze component
+
+## [2025.10.08]
+
+### Added
+- Designed a proof of concept for CaseAnalyze component
+
+### Updated
+- Created proof-of-concept branch and added CaseAnalyzeProof.java
+
 ## [2025.09.19]
 
 ### Added
