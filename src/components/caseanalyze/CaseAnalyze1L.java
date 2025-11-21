@@ -25,13 +25,17 @@ import components.set.Set1L;
 /**
  * Kernel implementation of {@code CaseAnalyze}.
  *
- * <p>This implementation uses an OSU {@code Map<String, Integer>} to store
- * suspect names with their suspicion levels, and an OSU {@code Set<String>}
- * to store clues. The representation follows the convention and correspondence
- * documented above.</p>
+ * <p>
+ * This implementation uses an OSU {@code Map<String, Integer>} to store suspect
+ * names with their suspicion levels, and an OSU {@code Set<String>} to store
+ * clues. The representation follows the convention and correspondence
+ * documented above.
+ * </p>
  *
- * <p>This class only implements kernel and standard methods. All secondary
- * methods are inherited from {@code CaseAnalyzeSecondary}.</p>
+ * <p>
+ * This class only implements kernel and standard methods. All secondary methods
+ * are inherited from {@code CaseAnalyzeSecondary}.
+ * </p>
  *
  * @author Jeng(Zizheng) Zhuang
  * @version 2025.11.20
@@ -49,8 +53,8 @@ public class CaseAnalyze1L extends CaseAnalyzeSecondary {
     private Set<String> clues;
 
     /**
-    * Default constructor: initializes an empty case.
-    */
+     * Default constructor: initializes an empty case.
+     */
     public CaseAnalyze1L() {
         this.suspects = new Map1L<>();
         this.clues = new Set1L<>();
@@ -167,5 +171,30 @@ public class CaseAnalyze1L extends CaseAnalyzeSecondary {
         }
 
         return result;
+    }
+
+    /**
+    * Replaces the current object with the state of the given {@code source},
+    * and clears the {@code source}. This method transfers ownership of the
+    * underlying representation, so after the call {@code source} becomes
+    * empty and this object assumes all of its prior contents.
+    *
+    * @param source
+    *            the CaseAnalyze object to transfer data from
+    * @throws IllegalArgumentException
+    *             if {@code source} is {@code null} or {@code source} is
+    *             {@code this}
+    */
+    @Override
+    public void transferFrom(CaseAnalyze source) {
+        if (source == null || source == this) {
+            throw new IllegalArgumentException(
+                    "source is null or source is this");
+        }
+        // Cast because kernel implementations must match type
+        CaseAnalyze1L localSource = (CaseAnalyze1L) source;
+
+        this.suspects.transferFrom(localSource.suspects);
+        this.clues.transferFrom(localSource.clues);
     }
 }
