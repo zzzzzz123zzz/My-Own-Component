@@ -7,6 +7,15 @@ and this project adheres to [Calendar Versioning](https://calver.org/) of
 the following form: YYYY.0M.0D.
 
 ## [Unreleased]
+## [2025.11.20]
+### Added
+- Completed kernel implementation for CaseAnalyze component
+- Added CaseAnalyze1L.java including full kernel + Standard method definitions
+- Added complete Javadoc for all methods
+- Added representation, convention, and correspondence documentation
+
+### Updated
+- Updated component design to finalize interaction between kernel and secondary layers
 
 ## [2025.09.19]
 
