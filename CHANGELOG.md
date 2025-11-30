@@ -8,7 +8,10 @@ the following form: YYYY.0M.0D.
 
 ## [Unreleased]
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 ## [2025.11.29]
 
 ### Updated
