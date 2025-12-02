@@ -7,20 +7,6 @@ and this project adheres to [Calendar Versioning](https://calver.org/) of
 the following form: YYYY.0M.0D.
 
 ## [Unreleased]
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 ## [2025.11.29]
 
 ### Updated
@@ -37,15 +23,7 @@ the following form: YYYY.0M.0D.
 
 ### Updated
 - Updated component design to finalize interaction between kernel and secondary layers
->>>>>>> Stashed changes
 
-## [2025.09.19]
-
-### Added
-
-- Designed a CaseAnalyzer component
-- Designed a Game Stats Tracker component
-- Designed a Anime & Media Collection component
 
 ## [2025.10.08]
 
@@ -54,3 +32,11 @@ the following form: YYYY.0M.0D.
 
 ### Updated
 - Created proof-of-concept branch and added CaseAnalyzeProof.java
+
+## [2025.09.19]
+
+### Added
+
+- Designed a CaseAnalyzer component
+- Designed a Game Stats Tracker component
+- Designed a Anime & Media Collection component
