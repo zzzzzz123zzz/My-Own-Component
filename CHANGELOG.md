@@ -7,8 +7,13 @@ and this project adheres to [Calendar Versioning](https://calver.org/) of
 the following form: YYYY.0M.0D.
 
 ## [Unreleased]
-## [2025.11.29]
+## [2025.12.10]
+### Added
+- Designed full JUnit test suite for CaseAnalyze component
+- Added two different use cases demonstrating basic and advanced usage
 
+### Updated
+- Improved documentation and cleaned up code formatting for final submission
 
 ## [2025.11.22]
 

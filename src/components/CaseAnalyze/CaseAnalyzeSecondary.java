@@ -1,14 +1,13 @@
 package components.caseanalyze;
 
-import components.map.Map;
 import components.set.Set;
 import components.simplewriter.SimpleWriter;
 
 /**
  * Abstract secondary implementation for the CaseAnalyze component.
  *
- * Implements enhanced (secondary) methods and Object methods
- * using only kernel and Standard methods.
+ * Implements enhanced (secondary) methods and Object methods using only kernel
+ * and Standard methods.
  *
  * @author Jeng(Zizheng) Zhuang
  * @version 2025.11.06
@@ -16,8 +15,8 @@ import components.simplewriter.SimpleWriter;
 public abstract class CaseAnalyzeSecondary implements CaseAnalyze {
 
     /*
-     * ------------------------------------------------------------
-     * Secondary methods from the enhanced interface
+     * ------------------------------------------------------------ Secondary
+     * methods from the enhanced interface
      * ------------------------------------------------------------
      */
 
@@ -31,10 +30,9 @@ public abstract class CaseAnalyzeSecondary implements CaseAnalyze {
         int clueCount = this.clueCount();
 
         /*
-         * Strategy:
-         * Use suspectNames() to iterate through suspects
-         * and set new suspicion levels accordingly.
-         * This avoids modifying this while iterating.
+         * Strategy: Use suspectNames() to iterate through suspects and set new
+         * suspicion levels accordingly. This avoids modifying this while
+         * iterating.
          */
         Set<String> names = this.suspectNames();
         Set<String> temp = names.newInstance();
@@ -74,8 +72,8 @@ public abstract class CaseAnalyzeSecondary implements CaseAnalyze {
     }
 
     /*
-     * ------------------------------------------------------------
-     * Common Object methods (using only kernel methods)
+     * ------------------------------------------------------------ Common
+     * Object methods (using only kernel methods)
      * ------------------------------------------------------------
      */
 
