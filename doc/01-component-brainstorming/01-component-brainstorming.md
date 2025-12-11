@@ -197,81 +197,98 @@ will likely refine your design to make your implementation easier to use.
 
 - Component Design #1: `CaseAnalyze`
   - **Description**:
-    - A component to manage suspects and clues in a case, inspired by Detective Conan. It stores suspects and clues (state) and provides methods to analyze and rank suspects based on clues (behavior).
+    - Inspired by Detective Conan, this component models a simple case investigation system. It tracks suspects and clues. Each suspect has a “suspicion level” that increases as clues are analyzed. This combines my interest in detective stories with OSU software design.
   - **Kernel Methods**:
-    - `addSuspect`(Suspect s) – add a suspect to the case
-    `addClue`(Clue c) – add a clue to the case
-    `removeSuspect`(Suspect s) – remove a suspect
-    `getSuspects()` – return the list of suspects
-    `getClues()` – return the list of clues
+    - `addSuspect`(String name) – Adds a suspect with suspicion level 0 only if the suspect is not already present.
+    `addClue`(String text) – Adds a clue string to this case.
+    `removeSuspect`(String name) – Removes the suspect with the given name if present.
+    boolean `hasSuspect`(String name) – Checks whether a suspect with this name exists.
+    int `getSuspicion`(String name) – Returns that suspect’s current suspicion value.
+    void `setSuspicion`(String name, int level) - Replaces the suspicion value for the suspect with the given integer.
+    int `suspectCount()` - Returns the number of suspects currently in the case.
+    int `clueCount()` - Returns the number of clues currently recorded.
+    void `clear()` - Resets this case to empty (no suspects, no clues).
   - **Secondary Methods**:
-    - `analyzeClues()` – increase each suspect's suspicion level based on the clues
-    `rankSuspects()`– sort suspects by suspicion level
-    `generateReport()` – produce a text report of all suspects
-    `clearCase()` – remove all suspects and clues
+    - `analyzeClues()` – Uses clueCount() to determine how many clues exist.
+    `generateReport()` – Prints a formatted list of suspects with their suspicion values.
+    boolean `equals(Object obj)` – Two cases are equal if:(1)their clue counts are identical(2)they contain the same suspects with the same suspicion values
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
       - Yes, because the internal lists of suspects and clues can change (add/remove items, update suspicion levels).
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - No, it uses `separate` classes (Suspect and Clue) but does not need inner classes or special map pairs.
+      - Uses OSU Map and Set.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
       - No, the component does not need enums; all behaviors are generic and based on integer weights or suspicion levels.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - Yes. For example, `analyzeClues()` uses `getClues()` and `getSuspects()` to update suspicion levels.
+      - Yes. For example, `analyzeClues()`, which increases every suspect’s suspicion level by the number of clues in the case. It uses `clueCount()`,  `getSuspicion`, `setSuspicion`, and `addSuspect`.
 
-- Component Design #2: `Game Stats Tracker`
+- Component Design #2: `PlayableCharacter`
   - **Description**:
-    - A component to track your game performance in King of Honors and Game for Peace. It stores statistics such as matches played, kills, deaths, assists, and achievements (state), and provides methods to calculate win rate, kill/death ratio, and generate performance summaries (behavior).
+    - This component models a playable character from the games I enjoy, such as King of Honors or Game for Peace.
+    It tracks simple attributes like level, experience, and health.
+    The kernel represents minimal operations for modifying character stats, and the secondary methods implement more complex character behavior such as leveling up.
   - **Kernel Methods**:
-    - `addMatchStats`(matchStats) – Add a new match record.
-    `updateAchievement`(achievement) – Update a specific achievement.
-    `getStats()` – Retrieve all game statistics.
+    - void `setLevel`(int lvl) – Sets the character’s level to the given integer.
+    int `getLevel()` – Returns the character’s current level.
+    void `setXP`(int xp) – Replaces the stored XP value.
+    int `getXP()` – Gets the stored XP amount.
+    void `setHealth(int hp)` - Sets current HP (health points).
+    int `getHealth()` - Returns current HP.
+    void `clear()` - Reset.
   - **Secondary Methods**:
-    - `calculateWinRate()` – Compute win rate from match records.
-    `calculateKDR()` – Compute kill/death ratio.
-    `summarizePerformance()` – Generate a summary string of all stats.
+    - void `gainXP(int amount)` – Adds XP; if XP passes a threshold, level increases. Uses getXP(), setXP(), setLevel().
+    void `takeDamage(int dmg)` – hp -= dmg (but not below 0). Uses getHealth(), setHealth().
+    void `heal(int amount)` – hp += amount (but not above max health).
+    boolean `isAlive()` - returns hp > 0.
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - Yes, because stats change after each game.
+      - Yes, the players' level can change
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - Possibly `MatchStats` as a small class to store match info.
+      - No.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - I don't know.
+      - Possibly MAX_HEALTH = 100.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - Yes, e.g., `calculateWinRate()` can use getStats() from kernel.
+      - Yes, consider the secondary method `gainXP(int amount)`. This method adds experience points and performs a level-up if the XP threshold is reached.The method uses `getXP()`, `setXP(int xp)`, `getLevel()`,and `setLevel(int lvl)`.
 
-- Component Design #3: `Anime & Media Collection`
+- Component Design #3: `MusicPlaylist`
   - **Description**:
-    - Models your collection of anime, manga, and movies. Tracks watch/read status, ratings, and recommendations.
+    - This component models a music playlist similar to the playlists I listen to while studying or drawing.
+    The playlist stores song titles and allows the user to add, remove, and reorder songs.
   - **Kernel Methods**:
-    - `addMedia`(title, type) – Add a new media item.
-    `updateStatus`(mediaID, status) – Mark as watching, completed, or planned.
-    `rateMedia`(mediaID, rating) – Assign a personal rating.
+    - void `addSong(String title)` – Adds a song to the playlist.
+    void `removeSong(String title)` – Removes this song if it exists.
+    int `size()` – Reports the number of songs.
+    String `removeAny()` - Removes and returns an arbitrary song.
+    void `clear()` - Empties the playlist.
+
   - **Secondary Methods**:
-    - `listByStatus`(status) – List media items by current status.
-    `getAverageRating`(type) – Calculate average rating for a type (anime, manga, movie).
-    `recommendNext()` – Suggest a media item based on ratings and status.
+    - boolean `contains(String title)` – Implemented by iterating with removeAny().
+    `String playNext()` – Returns the “next” song
+    `void shuffle()` – Removes all songs then re-adds them in random order.
+    String `toString()` - Text representation of the playlist.
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - Yes, you can add and update media items.
+      - Yes — songs can be added or removed.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - I don't know.
+      - None - simple String titles.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - I don't know.
+      - No, it won't.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - Yes, `getAverageRating()` uses `rateMedia()` data.
+      - Yes, consider `contains(String title)`.
+      This method checks whether a given song is present in the playlist.
+      The method works by repeatedly calling `removeAny()` to inspect each song, comparing the title, and then rebuilding the playlist using `addSong()`.
 
 ## Post-Assignment
 
