@@ -6,11 +6,11 @@ import components.set.Set;
 import components.set.Set1L;
 
 /*
- * Representation:
+ * @representation
  *   private Map<String, Integer> suspects;
  *   private Set<String> clues;
  *
- * Convention:
+ * @convention
  *   suspects != null
  *   clues != null
  *   All keys in suspects are non-null Strings
@@ -174,17 +174,17 @@ public class CaseAnalyze1L extends CaseAnalyzeSecondary {
     }
 
     /**
-    * Replaces the current object with the state of the given {@code source},
-    * and clears the {@code source}. This method transfers ownership of the
-    * underlying representation, so after the call {@code source} becomes
-    * empty and this object assumes all of its prior contents.
-    *
-    * @param source
-    *            the CaseAnalyze object to transfer data from
-    * @throws IllegalArgumentException
-    *             if {@code source} is {@code null} or {@code source} is
-    *             {@code this}
-    */
+     * Replaces the current object with the state of the given {@code source},
+     * and clears the {@code source}. This method transfers ownership of the
+     * underlying representation, so after the call {@code source} becomes empty
+     * and this object assumes all of its prior contents.
+     *
+     * @param source
+     *            the CaseAnalyze object to transfer data from
+     * @throws IllegalArgumentException
+     *             if {@code source} is {@code null} or {@code source} is
+     *             {@code this}
+     */
     @Override
     public void transferFrom(CaseAnalyze source) {
         if (source == null || source == this) {
