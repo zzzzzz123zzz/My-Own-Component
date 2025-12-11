@@ -15,9 +15,7 @@ import components.simplewriter.SimpleWriter;
 public abstract class CaseAnalyzeSecondary implements CaseAnalyze {
 
     /*
-     * ------------------------------------------------------------ Secondary
-     * methods from the enhanced interface
-     * ------------------------------------------------------------
+     * Secondary methods from the enhanced interface
      */
 
     @Override
@@ -72,9 +70,8 @@ public abstract class CaseAnalyzeSecondary implements CaseAnalyze {
     }
 
     /*
-     * ------------------------------------------------------------ Common
-     * Object methods (using only kernel methods)
-     * ------------------------------------------------------------
+     * Common Object methods (using only kernel methods)
+     *
      */
 
     @Override
