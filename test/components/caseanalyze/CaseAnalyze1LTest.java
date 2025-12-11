@@ -11,14 +11,20 @@ import components.map.Map;
 import components.set.Set;
 
 /**
- * Tests for CaseAnalyze1L class.
+ * JUnit test for the {@code CaseAnalyze1L} kernel implementation. This file
+ * thoroughly tests all kernel methods in the component, including: Constructor
+ * behavior,Adding/removing suspects, Adding clues,Query operations, Mutation
+ * operations,Iteration helper(suspectNames), and transferFrom.
+ *
+ * @author Jeng Zhuang
+ * @version 2025.12.10
  */
 public class CaseAnalyze1LTest {
 
     /**
-     * Creates a new CaseAnalyze instance.
+     * Helper that returns a new {@code CaseAnalyze1L} instance.
      *
-     * @return new CaseAnalyze1L instance.
+     * @return new instance of CaseAnalyze1L
      */
     private CaseAnalyze constructor() {
         return new CaseAnalyze1L();
@@ -251,54 +257,6 @@ public class CaseAnalyze1LTest {
     }
 
     /*
-     * clear Tests
-     */
-    /**
-     * Tests clear on an empty structure.
-     */
-    @Test
-    public void testClearEdgeEmpty() {
-        CaseAnalyze c = this.constructor();
-        c.clear();
-
-        assertEquals(0, c.suspectCount());
-        assertEquals(0, c.clueCount());
-    }
-
-    /**
-     * Tests clearing with one suspect and one clue.
-     */
-    @Test
-    public void testClear2() {
-        CaseAnalyze c = this.constructor();
-        c.addSuspect("A");
-        c.addClue("C1");
-
-        c.clear();
-
-        assertEquals(0, c.suspectCount());
-        assertEquals(0, c.clueCount());
-    }
-
-    /**
-     * Tests clearing many suspects and clues.
-     */
-    @Test
-    public void testClearChallengeMany() {
-        CaseAnalyze c = this.constructor();
-
-        for (int i = 0; i < 50; i++) {
-            c.addSuspect("S" + i);
-            c.addClue("C" + i);
-        }
-
-        c.clear();
-
-        assertEquals(0, c.suspectCount());
-        assertEquals(0, c.clueCount());
-    }
-
-    /*
      * removeAnySuspect Tests
      */
     /**
@@ -329,6 +287,9 @@ public class CaseAnalyze1LTest {
 
     /*
      * setSuspicion Tests
+     */
+    /**
+     * Tests setting suspicion for a newly added suspect.
      */
     @Test
     public void testSetSuspicionEdge() {

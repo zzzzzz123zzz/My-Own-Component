@@ -45,6 +45,11 @@ public abstract class CaseAnalyzeSecondary implements CaseAnalyze {
         }
     }
 
+    /*
+     * generateReport method This implementation prints a structured summary of
+     * the case, including the total number of clues and a list of suspects with
+     * their suspicion levels.
+     */
     @Override
     public final void generateReport(SimpleWriter out) {
         // Check precondition
@@ -70,8 +75,9 @@ public abstract class CaseAnalyzeSecondary implements CaseAnalyze {
     }
 
     /*
-     * Common Object methods (using only kernel methods)
-     *
+     * Returns a human-readable string summarizing the case.
+     * 
+     * @return a string representing this case
      */
 
     @Override
@@ -98,6 +104,14 @@ public abstract class CaseAnalyzeSecondary implements CaseAnalyze {
         return sb.toString();
     }
 
+    /*
+     * Compares this {@code CaseAnalyze} object to another for deep semantic
+     * equality.
+     * 
+     * @param obj the object to compare to
+     *
+     * @return true if {@code obj} represents the same abstract state
+     */
     @Override
     public final boolean equals(Object obj) {
         if (obj == this) {
@@ -137,6 +151,11 @@ public abstract class CaseAnalyzeSecondary implements CaseAnalyze {
         return true;
     }
 
+    /*
+     * Computes a hash code consistent with {@code equals}.
+     * 
+     * @return hash code for this case analyze
+     */
     @Override
     public int hashCode() {
         int h = 1;

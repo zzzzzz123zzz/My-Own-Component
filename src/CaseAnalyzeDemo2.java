@@ -4,13 +4,34 @@ import components.simplewriter.SimpleWriter;
 import components.simplewriter.SimpleWriter1L;
 
 /**
- * Demo 2: Managing multiple case files.
+ * Demo 2: Advanced Multi-Case Management
  *
- * Shows advanced usage: - two separate investigations - merging using
- * transferFrom - comparing cases with equals - using toString for inspection
+ * This example demonstrates a more advanced and system-level use of the
+ * CaseAnalyze component. Unlike Demo 1, which handles one simple investigation,
+ * this demo focuses on working with multiple case files and performing
+ * higher-level operations: Maintain multiple independent CaseAnalyze objects
+ * Analyze each case separately Merge cases using transferFrom Compare cases
+ * using equals Inspect internal state using toString
+ *
+ * This demo highlights how the component behaves in scenarios such as case
+ * consolidation, data migration, and integrity checking, which are much closer
+ * to real forensic systems handling multiple case files.
+ *
  */
-public class CaseAnalyzeDemo2 {
+public final class CaseAnalyzeDemo2 {
 
+    /**
+     * Private constructor to prevent instantiation.
+     */
+    private CaseAnalyzeDemo2() {
+    }
+
+    /**
+     * Main method to demonstrate managing multiple case files.
+     *
+     * @param args
+     *            command line arguments (not used)
+     */
     public static void main(String[] args) {
         SimpleWriter out = new SimpleWriter1L();
         out.println("=== Demo 2: Managing Multiple Investigations ===");

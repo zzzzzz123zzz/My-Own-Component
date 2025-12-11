@@ -10,7 +10,14 @@ import components.simplewriter.SimpleWriter;
 import components.simplewriter.SimpleWriter1L;
 
 /**
- * Tests for secondary methods in CaseAnalyzeSecondary.
+ * JUnit test for the secondary methods of the {@code CaseAnalyze} component.
+ * These tests cover all functionality implemented in
+ * {@code CaseAnalyzeSecondary}, including: {@code analyzeClues()},
+ * {@code generateReport(SimpleWriter)},{@code toString()} ,
+ * {@code equals(Object)}, and {@code hashCode()}.
+ * 
+ * @author Jeng Zhuang
+ * @version 2025.12.10
  */
 public class CaseAnalyzeSecondaryTest {
 

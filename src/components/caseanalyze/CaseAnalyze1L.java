@@ -25,17 +25,13 @@ import components.set.Set1L;
 /**
  * Kernel implementation of {@code CaseAnalyze}.
  *
- * <p>
  * This implementation uses an OSU {@code Map<String, Integer>} to store suspect
  * names with their suspicion levels, and an OSU {@code Set<String>} to store
  * clues. The representation follows the convention and correspondence
  * documented above.
- * </p>
  *
- * <p>
  * This class only implements kernel and standard methods. All secondary methods
  * are inherited from {@code CaseAnalyzeSecondary}.
- * </p>
  *
  * @author Jeng(Zizheng) Zhuang
  * @version 2025.11.20
