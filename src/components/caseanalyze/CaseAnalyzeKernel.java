@@ -89,4 +89,31 @@ public interface CaseAnalyzeKernel extends Standard<CaseAnalyze> {
      */
     @Override
     void clear();
+
+    /**
+     * Removes and returns an arbitrary suspect entry as a Map.Pair(name,
+     * suspicion).
+     *
+     * @requires this.suspectCount() > 0
+     * @updates this
+     * @ensures this.suspectCount() = #this.suspectCount() - 1
+     */
+    Map.Pair<String, Integer> removeAnySuspect();
+
+    /**
+     * Sets the suspicion level for an existing suspect.
+     *
+     * @requires this.hasSuspect(name)
+     * @updates this
+     * @ensures this.getSuspicion(name) = suspicion
+     */
+    void setSuspicion(String name, int suspicion);
+
+    /**
+     * Returns a (component) Set containing the names of all suspects (a copy).
+     *
+     * @return a Set<String> of suspect names
+     * @ensures no change to this
+     */
+    Set<String> suspectNames();
 }
