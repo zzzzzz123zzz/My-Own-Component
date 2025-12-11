@@ -1,7 +1,5 @@
 package components.caseanalyze;
 
-import components.map.Map;
-import components.set.Set;
 import components.standard.Standard;
 
 /**
