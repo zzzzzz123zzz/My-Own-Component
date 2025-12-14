@@ -17,6 +17,8 @@ import components.simplewriter.SimpleWriter1L;
  * consolidation, data migration, and integrity checking, which are much closer
  * to real forensic systems handling multiple case files.
  *
+ * @author Jeng Zhuang
+ * @version 2025.12.10
  */
 public final class CaseAnalyzeDemo2 {
 
@@ -30,7 +32,7 @@ public final class CaseAnalyzeDemo2 {
      * Main method to demonstrate managing multiple case files.
      *
      * @param args
-     *            command line arguments (not used)
+     *            command line arguments
      */
     public static void main(String[] args) {
         SimpleWriter out = new SimpleWriter1L();

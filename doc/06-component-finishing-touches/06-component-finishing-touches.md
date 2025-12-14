@@ -2,7 +2,7 @@
 
 - **Name**: Jeng(Zizheng) Zhuang
 - **Dot Number**: zhuang.339
-- **Due Date**: 10/110 @ 11:59 PM EST
+- **Due Date**: 12/10 @ 11:59 PM EST
 
 ## Assignment Overview
 

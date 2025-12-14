@@ -29,7 +29,7 @@ public final class CaseAnalyzeDemo1 {
      * Runs the basic demonstration.
      *
      * @param args
-     *            command line arguments (not used)
+     *            command line arguments
      */
     public static void main(String[] args) {
         SimpleWriter out = new SimpleWriter1L();
