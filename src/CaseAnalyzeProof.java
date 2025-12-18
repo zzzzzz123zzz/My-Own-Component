@@ -34,12 +34,18 @@ public class CaseAnalyzeProof {
         this.clues = new Set1L<>();
     }
 
-    // ------------------------------------------------------------
-    // Kernel Methods
-    // ------------------------------------------------------------
+    /**
+     * Kernel Methods
+     */
 
     /**
      * Adds a suspect with suspicion level 0 if not already present.
+     *
+     * @param name
+     *            the suspect’s name
+     * @requires name != null
+     * @updates suspects
+     * @ensures suspects contains (name, 0)
      */
     public void addSuspect(String name) {
         if (!this.suspects.hasKey(name)) {
@@ -49,6 +55,12 @@ public class CaseAnalyzeProof {
 
     /**
      * Removes a suspect if they exist.
+     *
+     * @param name
+     *            the suspect’s name
+     * @requires name != null
+     * @updates suspects
+     * @ensures suspects does not contain name
      */
     public void removeSuspect(String name) {
         if (this.suspects.hasKey(name)) {
@@ -58,17 +70,27 @@ public class CaseAnalyzeProof {
 
     /**
      * Adds a clue.
+     *
+     * @param clue
+     *            the clue description
+     * @requires clue != null
+     * @updates clues
+     * @ensures clue is in clues
      */
     public void addClue(String clue) {
         this.clues.add(clue);
     }
 
-    // ------------------------------------------------------------
-    // Secondary Methods
-    // ------------------------------------------------------------
+    /*
+     * Secondary Methods
+     *
+     */
 
     /**
      * Analyzes clues: each clue increases all suspects' suspicion by 1.
+     *
+     * @updates suspects
+     * @ensures each suspect’s suspicion = #oldSuspicion + clues.size()
      */
     public void analyzeClues() {
         int clueCount = this.clues.size();
@@ -84,6 +106,11 @@ public class CaseAnalyzeProof {
 
     /**
      * Generates a simple report showing suspects and their suspicion levels.
+     *
+     * @param out
+     *            output writer to use
+     * @requires out != null
+     * @ensures out receives printed case information
      */
     public void generateReport(SimpleWriter out) {
         out.println("=== Case Report ===");
@@ -101,10 +128,9 @@ public class CaseAnalyzeProof {
         out.println("====================");
     }
 
-    // ------------------------------------------------------------
-    // Main: Proof-of-Concept demonstration
-    // ------------------------------------------------------------
-
+    /*
+     * Main: Proof-of-Concept demonstration
+     */
     public static void main(String[] args) {
         SimpleWriter out = new SimpleWriter1L();
         CaseAnalyzeProof case1 = new CaseAnalyzeProof();

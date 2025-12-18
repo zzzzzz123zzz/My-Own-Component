@@ -1,5 +1,7 @@
 package components.caseanalyze;
 
+import components.map.Map;
+import components.set.Set;
 import components.standard.Standard;
 
 /**
@@ -80,15 +82,6 @@ public interface CaseAnalyzeKernel extends Standard<CaseAnalyze> {
      * @return number of clues
      */
     int clueCount();
-
-    /**
-     * Clears this case (removes all suspects and clues).
-     *
-     * @updates this
-     * @ensures this.suspectCount() = 0 and this.clueCount() = 0
-     */
-    @Override
-    void clear();
 
     /**
      * Removes and returns an arbitrary suspect entry as a Map.Pair(name,

@@ -16,7 +16,7 @@ import components.set.Set1L;
  *   All keys in suspects are non-null Strings
  *   All values in suspects (suspicion levels) are >= 0
  *
- * Correspondence:
+ * @correspondence
  *   this.suspectCount() = suspects.size()
  *   this.clueCount() = clues.size()
  *   this.getSuspicion(name) = suspects.value(name)
@@ -25,17 +25,13 @@ import components.set.Set1L;
 /**
  * Kernel implementation of {@code CaseAnalyze}.
  *
- * <p>
  * This implementation uses an OSU {@code Map<String, Integer>} to store suspect
  * names with their suspicion levels, and an OSU {@code Set<String>} to store
  * clues. The representation follows the convention and correspondence
  * documented above.
- * </p>
  *
- * <p>
  * This class only implements kernel and standard methods. All secondary methods
  * are inherited from {@code CaseAnalyzeSecondary}.
- * </p>
  *
  * @author Jeng(Zizheng) Zhuang
  * @version 2025.11.20
@@ -128,15 +124,6 @@ public class CaseAnalyze1L extends CaseAnalyzeSecondary {
     @Override
     public int clueCount() {
         return this.clues.size();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public void clear() {
-        this.suspects.clear();
-        this.clues.clear();
     }
 
     /**
